@@ -2,37 +2,7 @@ const puppeteer = require("puppeteer");
 
 async function main() {
   // Array of URLs to open in browser tabs
-  const urls = [
-    "https://www.google.com",
-    "https://www.youtube.com",
-    "https://www.facebook.com",
-    "https://www.twitter.com",
-    "https://www.instagram.com",
-    "https://www.reddit.com",
-    "https://www.linkedin.com",
-    "https://www.pinterest.com",
-    "https://www.github.com",
-    "https://www.stackoverflow.com",
-    "https://www.quora.com",
-    "https://www.amazon.com",
-    "https://www.ebay.com",
-    "https://www.alibaba.com",
-    "https://www.flipkart.com",
-    "https://www.walmart.com",
-    "https://www.bestbuy.com",
-    "https://www.target.com",
-    "https://www.costco.com",
-    "https://www.tesco.com",
-    "https://www.jd.com",
-    "https://www.aliexpress.com",
-    "https://www.gearbest.com",
-    "https://www.newegg.com",
-    "https://www.wish.com",
-    "https://www.banggood.com",
-    "https://www.dhgate.com",
-    "https://www.lightinthebox.com",
-    "https://www.miniinthebox.com",
-  ];
+  const urls = require("./urls.json");
 
   // Launch a browser instance
   const browser = await puppeteer.launch({
