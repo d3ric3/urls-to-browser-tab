@@ -1,4 +1,12 @@
-const puppeteer = require("puppeteer");
+// puppeteer-extra is a drop-in replacement for puppeteer,
+// it augments the installed puppeteer with plugin functionality
+const puppeteer = require("puppeteer-extra");
+
+// add stealth plugin and use defaults (all evasion techniques)
+const StealthPlugin = require("puppeteer-extra-plugin-stealth");
+puppeteer.use(StealthPlugin());
+
+const { executablePath } = require("puppeteer");
 
 async function main() {
   // Array of URLs to open in browser tabs
@@ -7,6 +15,7 @@ async function main() {
   // Launch a browser instance
   const browser = await puppeteer.launch({
     headless: false, // Set this to 'true' if you don't want to see the browser window
+    executablePath: executablePath(),
     defaultViewport: null,
   });
 
