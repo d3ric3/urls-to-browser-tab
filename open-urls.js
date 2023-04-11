@@ -38,7 +38,8 @@ async function main() {
     if (pages.length > 0) await pages[0].bringToFront();
 
     // Navigate to the URL
-    await page.goto(url);
+    // set no timeout for loading page: { timeout: 0 }
+    await page.goto(url, { timeout: 0 });
 
     // Close the tab when the user is ready
     page.on("close", () => {
