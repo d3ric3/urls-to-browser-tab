@@ -34,7 +34,7 @@ let urls = [];
 focusMudahFolder.children.forEach((x) => urls.push(x.uri));
 focusIpropertyFolder.children.forEach((x) => urls.push(x.uri));
 
-require("fs").writeFile(
+require("fs").writeFileSync(
   "./urls.json",
 
   JSON.stringify(urls),
@@ -45,3 +45,5 @@ require("fs").writeFile(
     }
   }
 );
+
+console.log("finishing running extract-firefoxbookmark-urls.js");
