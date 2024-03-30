@@ -19,8 +19,8 @@
   },
   "homepage": "https://github.com/d3ric3/urls-to-browser-tab#readme",
   "dependencies": {
-    "puppeteer": "^22.5.0",
-    "puppeteer-extra": "^3.3.6",
-    "puppeteer-extra-plugin-stealth": "^2.11.2"
+    "puppeteer": "^19.6.3",
+    "puppeteer-extra": "^3.3.4",
+    "puppeteer-extra-plugin-stealth": "^2.11.1"
   }
 }

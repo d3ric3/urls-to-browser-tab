@@ -26,11 +26,17 @@ const focusMudahFolder = otherBookmarks.children.filter(
 )[0];
 
 // "FOCUS iPROPERTY" folder
+const focusEdgepropFolder = otherBookmarks.children.filter(
+  (x) => x.title == "FOCUS EDGEPROP"
+)[0];
+
+// "FOCUS iPROPERTY" folder
 const focusIpropertyFolder = otherBookmarks.children.filter(
   (x) => x.title == "FOCUS iPROPERTY"
 )[0];
 
 let urls = [];
+focusEdgepropFolder.children.forEach((x) => urls.push(x.uri));
 focusMudahFolder.children.forEach((x) => urls.push(x.uri));
 focusIpropertyFolder.children.forEach((x) => urls.push(x.uri));
 

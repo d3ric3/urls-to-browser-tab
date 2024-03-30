@@ -28,7 +28,7 @@ async function main() {
   // Open a new tab for each URL in the array
   for (const url of urls) {
     // Wait until there are fewer than 3 active tabs
-    while (activeTabs >= 3) {
+    while (activeTabs >= 5) {
       await new Promise((resolve) => setTimeout(resolve, 1000));
     }
 
