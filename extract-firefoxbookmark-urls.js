@@ -36,9 +36,15 @@ const focusIpropertyFolder = otherBookmarks.children.filter(
 )[0];
 
 let urls = [];
-focusEdgepropFolder.children.forEach((x) => urls.push(x.uri));
-focusMudahFolder.children.forEach((x) => urls.push(x.uri));
-focusIpropertyFolder.children.forEach((x) => urls.push(x.uri));
+focusEdgepropFolder.children.forEach((x) =>
+  urls.push({ uri: x.uri, title: x.title })
+);
+focusMudahFolder.children.forEach((x) =>
+  urls.push({ uri: x.uri, title: x.title })
+);
+focusIpropertyFolder.children.forEach((x) =>
+  urls.push({ uri: x.uri, title: x.title })
+);
 
 require("fs").writeFileSync(
   "./urls.json",

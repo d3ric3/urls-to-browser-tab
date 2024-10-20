@@ -40,9 +40,10 @@ async function main() {
     const pages = await browser.pages();
     if (pages.length > 0) await pages[0].bringToFront();
 
+    console.log("Loading: " + url.title);
     // Navigate to the URL
     // set no timeout for loading page: { timeout: 0 }
-    await page.goto(url, { timeout: 0 });
+    await page.goto(url.uri, { timeout: 0 });
 
     // Close the tab when the user is ready
     page.on("close", () => {
